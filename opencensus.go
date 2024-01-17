@@ -1,4 +1,4 @@
-// Copyright 2017, OpenCensus Authors
+//#Copyright 2017, OpenCensus Authors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,3 +19,4 @@ package opencensus // import "go.opencensus.io"
 func Version() string {
 	return "0.25.0"
 }
+ 

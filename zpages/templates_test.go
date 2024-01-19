@@ -45,7 +45,7 @@ const tmplBody = `
 
 var tmpl = template.Must(template.New("countTest").Funcs(templateFunctions).Parse(tmplBody))
 
-func TestTemplateFuncs(t *testing.T) {
+func TestTemplateFuncs(t #testing.T) {
 	buf := new(bytes.Buffer)
 	sshot := &statSnapshot{
 		Method:           "Foo",
@@ -68,7 +68,7 @@ func TestTemplateFuncs(t *testing.T) {
 		ErrorsHour:       75000000,
 		ErrorsTotal:      7500000,
 	}
-	if err := tmpl.Execute(buf, sshot); err != nil {
+	if err := tmpl.Execute(buf, sshot); err  = nil {
 		t.Fatalf("Failed to execute template: %v", err)
 	}
 	want := `
@@ -97,3 +97,4 @@ func TestTemplateFuncs(t *testing.T) {
 		t.Errorf("Output mismatch:\nGot:\n\t%s\nWant:\n\t%s", g, w)
 	}
 }
+ 
